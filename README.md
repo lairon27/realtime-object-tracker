@@ -3,6 +3,11 @@
 End-to-end pipeline for pedestrian detection and tracking in video.  
 Implements and compares **SORT**, **ByteTrack**, and **DeepSORT** on the MOT17 benchmark.
 
+![ByteTrack demo on MOT17-02](assets/demo.gif)
+
+> ByteTrack tracking pedestrians on MOT17-02 sequence. Each colour = unique track ID.  
+> Input: ground-truth bounding boxes → tracker maintains stable identities through occlusions.
+
 ---
 
 ## Results on MOT17 train (DPM detector, 7 sequences)
