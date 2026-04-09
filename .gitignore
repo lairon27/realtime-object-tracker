@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Data (large files — download separately)
+data/MOT17/
+data/MOT17*/
+data/*.zip
+data/*.tar.gz
+data/*.tar
+*.mp4
+*.avi
+*.mov
+
+# Model weights
+*.pt
+*.pth
+*.onnx
+*.engine
+
+# Output / results
+outputs/
+results/
+runs/
+
+# Assets (generated)
+assets/demo.gif
+assets/*.mp4
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+wandb/
+mlruns/

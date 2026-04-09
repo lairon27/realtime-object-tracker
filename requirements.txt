@@ -1,0 +1,25 @@
+# Detection
+ultralytics>=8.0.0
+
+# Tracking & math
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Computer vision
+opencv-python>=4.8.0
+
+# Re-ID / appearance features
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Evaluation
+motmetrics>=1.4.0
+
+# Config
+PyYAML>=6.0
+
+# Demo
+streamlit>=1.28.0
+
+# Testing
+pytest>=7.4.0

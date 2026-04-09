@@ -1,0 +1,40 @@
+# Real-time Object Tracker — default configuration
+
+data:
+  mot17_root: "data/MOT17 2"          # path to MOT17 dataset root
+  split: "train"                        # train / test
+  sequence: "MOT17-02-DPM"             # default sequence for quick runs
+
+detector:
+  model: "yolov8n.pt"                  # YOLOv8 nano (fastest); swap to yolov8m.pt for better accuracy
+  confidence_threshold: 0.25
+  iou_threshold: 0.45                  # NMS IoU threshold
+  target_class: 0                      # COCO class 0 = person
+  device: "cpu"                        # cpu / cuda / mps
+
+tracker:
+  algorithm: "bytetrack"               # sort | bytetrack | deepsort
+  max_age: 30                          # frames to keep a lost track alive
+  min_hits: 3                          # min detections before track is confirmed
+  iou_threshold: 0.3                   # min IoU to match detection → track
+
+bytetrack:
+  high_thresh: 0.6                     # high-confidence detection threshold
+  low_thresh: 0.1                      # low-confidence detection threshold (second stage)
+  match_thresh: 0.8                    # IoU threshold for first-stage matching
+
+deepsort:
+  max_cosine_distance: 0.4             # max cosine distance for appearance matching
+  nn_budget: 100                       # max size of appearance gallery per track
+  reid_model: "osnet_x0_25"           # Re-ID backbone
+
+kalman:
+  process_noise_scale: 1.0
+  measurement_noise_scale: 1.0
+
+output:
+  save_video: true
+  output_dir: "outputs"
+  show_track_id: true
+  show_confidence: true
+  bbox_thickness: 2
